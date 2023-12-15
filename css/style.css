@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conatiner{
+    max-width: 1330px;
+    margin: 5rem auto;
+}
+.grid_section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.card_section{
+    justify-self: center;
+}
+
+.card_item{
+    position: relative;
+    width: 300px;
+    box-shadow:  0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+    border-radius: 30px;
+    padding: 43px;
+    cursor: pointer;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.card_item::before{
+    display: block;
+    content: "";
+    width: 9%;
+    height: 18%;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+   
+    border-bottom-right-radius: 30px;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+
+}
+.card_item::after{
+    display: block;
+    content: "";
+    width: 9%;
+    height: 18%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-top-left-radius: 30px;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+
+   
+
+}
+.card_section:hover .card_item::before,.card_section:hover  .card_item::after{
+    width: 80%;
+    height: 80%;
+}
+.card_item_search::before{
+    border-bottom: 3px solid #015bfa;
+    border-right: 3px solid #015bfa;
+}
+.card_item_search::after{
+    border-top: 3px solid #015bfa;
+    border-left: 3px solid #015bfa;
+}
+.card_item_cv::before{
+    border-bottom: 3px solid #ef5e44;
+    border-right: 3px solid #ef5e44;
+}
+.card_item_cv::after{
+    border-top: 3px solid #ef5e44;
+    border-left: 3px solid #ef5e44;
+}
+.card_item_account::before{
+    border-bottom: 3px solid #fdbe29;
+    border-right: 3px solid #fdbe29;
+}
+.card_item_account::after{
+    border-top: 3px solid #fdbe29;
+    border-left: 3px solid #fdbe29;
+}
+.card_item_success::before{
+    border-bottom: 3px solid #6c3dc4;
+    border-right: 3px solid #6c3dc4;
+}
+.card_item_success::after{
+    border-top: 3px solid #6c3dc4;
+    border-left: 3px solid #6c3dc4;
+}
+.card_title{
+    margin: 2rem 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2e3350;
+}
+
+.card_catption{
+    
+    color:#9a9baa;
+}
